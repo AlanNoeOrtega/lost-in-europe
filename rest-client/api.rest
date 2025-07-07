@@ -1,0 +1,39 @@
+POST http://localhost:3000/tickets/sort 
+content-type: application/json
+
+{
+  "tickets": [
+    {
+      "type": "airplane",
+      "from": "Innsbruck Airport",
+      "to": "Venice Airport",
+      "details": {
+        "flight": "AA904",
+        "gate": "10",
+        "seat": "18B"
+      }
+    },
+    {
+      "type": "tram",
+      "from": "Innsbruck Hbf",
+      "to": "Innsbruck Airport",
+      "details": {
+        "tram": "S5"
+      }
+    },
+    {
+      "type": "train",
+      "from": "St Anton am Arlberg Bahnhof",
+      "to": "Innsbruck Hbf",
+      "details": {
+        "platform": "1",
+        "train": "RJX 765",
+        "seat": "17C"
+      }
+    }
+  ]
+}
+
+###
+GET http://localhost:3000/tickets/itinerary/4
+
